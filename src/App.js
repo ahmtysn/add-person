@@ -8,7 +8,10 @@ function App() {
   };
   const onSubmit = (e) => {
     e.preventDefault();
-    if (person.firstName.trim() === "" || person.lastName.trim() === "") return;
+    if (person.firstName.trim() === "" || person.lastName.trim() === "") {
+      alert("Please fill in the blanks...");
+      return;
+    }
     const newPerson = {
       firstName: person.firstName.trim(),
       lastName: person.lastName.trim(),
